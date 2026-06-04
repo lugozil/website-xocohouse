@@ -1,0 +1,199 @@
+/* ============================================================
+   XOCO HOUSE — Event Gallery
+   Foundations: Color + Typography tokens
+   "A space where every moment comes to life."
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "Roman Serif";
+  src: url("fonts/RomanSerif.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roman Serif";
+  src: url("fonts/RomanSerif-Oblique.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+/* Montserrat is loaded from Google Fonts at point of use — see README (font substitution). */
+
+:root {
+  /* ============================================================
+     BASE COLOR TOKENS
+     Earthy, gallery-warm. High-contrast ink-on-bone with a
+     single clay/terracotta accent drawn from the logo.
+     ============================================================ */
+
+  /* Ink (deep neutrals — text & dark surfaces) */
+  --xh-ink-900: #1A1A1A;   /* deep near-black — primary text, dark bg  */
+  --xh-ink-800: #262320;
+  --xh-ink-700: #3A352F;   /* warm charcoal */
+  --xh-black:   #000000;   /* pure black — logo master, high drama only */
+
+  /* Stone (warm muted grays — secondary text, lines) */
+  --xh-stone-600: #6E655B;  /* secondary text */
+  --xh-stone-500: #897F73;
+  --xh-stone-400: #A89E92;  /* tertiary / disabled */
+  --xh-stone-300: #C7BEB2;  /* hairline borders on light */
+
+  /* Sand (warm neutral surfaces, from natural light & adobe) */
+  --xh-sand-200: #E8E0D5;   /* secondary surface, fills */
+  --xh-sand-100: #F0EAE1;   /* subtle tint */
+  --xh-bone:     #F9F8F6;   /* primary off-white background */
+  --xh-white:    #FFFFFF;   /* pure white — cards on bone */
+
+  /* Terracotta / Clay (the brand accent — sampled from logo) */
+  --xh-terracotta-700: #6E4F36;  /* deep clay — pressed states */
+  --xh-terracotta-600: #906848;  /* AUTHENTIC LOGO COLOR — primary accent */
+  --xh-terracotta-500: #A87C57;  /* hover / lighter clay */
+  --xh-clay-500:       #C47A5D;  /* brighter terracotta — secondary accent */
+  --xh-terracotta-200: #E3D3C4;  /* clay tint — soft fills */
+  --xh-terracotta-100: #F1E8E0;  /* faintest clay wash */
+
+  /* Functional (used sparingly, kept earthy) */
+  --xh-success: #5E6B4F;   /* olive */
+  --xh-error:   #9E4B3B;   /* burnt sienna */
+
+  /* ============================================================
+     SEMANTIC TOKENS — reference these in product work
+     ============================================================ */
+  --bg:            var(--xh-bone);
+  --bg-dark:       var(--xh-ink-900);
+  --surface:       var(--xh-white);
+  --surface-sunk:  var(--xh-sand-100);
+  --surface-alt:   var(--xh-sand-200);
+
+  --fg:            var(--xh-ink-900);   /* primary text */
+  --fg-2:          var(--xh-stone-600); /* secondary text */
+  --fg-3:          var(--xh-stone-400); /* tertiary text */
+  --fg-on-dark:    var(--xh-bone);
+  --fg-on-accent:  var(--xh-bone);
+
+  --accent:        var(--xh-terracotta-600);
+  --accent-hover:  var(--xh-terracotta-500);
+  --accent-press:  var(--xh-terracotta-700);
+  --accent-soft:   var(--xh-terracotta-100);
+
+  --border:        var(--xh-stone-300);
+  --border-soft:   var(--xh-sand-200);
+  --border-strong: var(--xh-ink-900);
+
+  /* ============================================================
+     TYPE FAMILIES
+     ============================================================ */
+  --font-display: "Roman Serif", "Cormorant Garamond", Georgia, serif;
+  --font-sans:    "Montserrat", "Helvetica Neue", Arial, sans-serif;
+
+  /* Letterspacing — the wide-tracked caps are core to the brand */
+  --track-tightest: -0.01em;
+  --track-display:   0.01em;
+  --track-label:     0.28em;  /* "EVENT GALLERY" spacing */
+  --track-eyebrow:   0.34em;
+  --track-body:      0.005em;
+
+  /* ============================================================
+     TYPE SCALE  (1.25 major-third-ish, gallery-generous)
+     ============================================================ */
+  --text-display:  clamp(3.75rem, 7.5vw, 6.5rem); /* hero serif */
+  --text-h1:       clamp(2.75rem, 5vw, 4.25rem);
+  --text-h2:       clamp(2rem, 3.4vw, 2.875rem);
+  --text-h3:       1.75rem;
+  --text-h4:       1.375rem;
+  --text-body-lg:  1.25rem;
+  --text-body:     1.0625rem;  /* 17px */
+  --text-small:    0.9375rem;  /* 15px */
+  --text-label:    0.8125rem;  /* 13px */
+  --text-micro:    0.75rem;
+
+  --leading-tight: 1.05;
+  --leading-snug:  1.2;
+  --leading-body:  1.65;
+
+  /* ============================================================
+     SPACING  (8px base, generous gallery whitespace)
+     ============================================================ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --space-11: 160px;
+
+  /* ============================================================
+     RADII  (minimal — gallery sharpness, soft only on controls)
+     ============================================================ */
+  --radius-none: 0px;
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-pill: 999px;
+
+  /* ============================================================
+     SHADOWS  (soft, warm, low — diffuse natural light)
+     ============================================================ */
+  --shadow-xs: 0 1px 2px rgba(26,26,26,0.05);
+  --shadow-sm: 0 2px 8px rgba(26,26,26,0.06);
+  --shadow-md: 0 8px 28px rgba(26,26,26,0.08);
+  --shadow-lg: 0 24px 60px rgba(26,26,26,0.12);
+
+  /* ============================================================
+     MOTION  (calm, serene — slow & soft)
+     ============================================================ */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur: 320ms;
+  --dur-slow: 600ms;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES — opt-in helper classes
+   ============================================================ */
+.xh-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--track-display);
+  color: var(--fg);
+}
+.xh-h1 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-h1); line-height: var(--leading-tight); letter-spacing: var(--track-display); color: var(--fg); }
+.xh-h2 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-h2); line-height: var(--leading-snug); color: var(--fg); }
+.xh-h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-h3); line-height: var(--leading-snug); color: var(--fg); }
+
+/* Tracked caps — the signature "EVENT GALLERY" treatment */
+.xh-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-eyebrow);
+  color: var(--accent);
+}
+.xh-label {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--fg-2);
+}
+.xh-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--track-body);
+  color: var(--fg);
+}
+.xh-body-lg { font-family: var(--font-sans); font-weight: 400; font-size: var(--text-body-lg); line-height: var(--leading-body); color: var(--fg); }
+.xh-small { font-family: var(--font-sans); font-weight: 400; font-size: var(--text-small); line-height: 1.5; color: var(--fg-2); }

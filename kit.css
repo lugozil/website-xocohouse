@@ -1,0 +1,60 @@
+/* Xoco House — Website UI Kit styles (builds on colors_and_type.css) */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--xh-bone);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ---------- shared primitives ---------- */
+.eyebrow {
+  font-size: 13.5px; font-weight: 600; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--accent);
+}
+.eyebrow.on-dark { color: var(--xh-terracotta-500); }
+.serif { font-family: var(--font-display); font-weight: 400; letter-spacing: 0.01em; }
+.rule { width: 56px; height: 1px; background: var(--xh-stone-300); border: 0; margin: 0; }
+.rule.on-dark { background: rgba(249,248,246,0.3); }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+@media (max-width: 600px) { .container { padding: 0 20px; } }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap;
+  padding: 16px 32px; border-radius: var(--radius-md); border: 1px solid transparent;
+  transition: background var(--dur) var(--ease-out), color var(--dur) var(--ease-out),
+              border-color var(--dur) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.btn-primary { background: var(--accent); color: var(--xh-bone); }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-primary:active { background: var(--accent-press); transform: scale(0.99); }
+.btn-ghost { background: transparent; color: var(--fg); border-color: var(--xh-ink-900); }
+.btn-ghost:hover { background: var(--xh-ink-900); color: var(--xh-bone); }
+.btn-ghost.on-dark { color: var(--xh-bone); border-color: rgba(249,248,246,0.5); }
+.btn-ghost.on-dark:hover { background: var(--xh-bone); color: var(--xh-ink-900); border-color: var(--xh-bone); }
+.btn-text { background: transparent; padding: 6px 0; color: var(--accent); border: 0; letter-spacing: 0.16em; }
+.btn-text span { border-bottom: 1px solid currentColor; padding-bottom: 3px; transition: gap var(--dur); }
+.btn-text:hover { color: var(--accent-press); }
+
+image-slot { display: block; }
+
+/* reveal-on-load motion — resting state is always fully visible (no opacity trap) */
+@keyframes xhRise { from { transform: translateY(16px); } to { transform: none; } }
+.rise { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .rise.in { animation: xhRise var(--dur-slow) var(--ease-out) both; }
+}
+
+/* sections */
+.section { padding: 128px 0; }
+.section.tight { padding: 96px 0; }
+.section-head { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; margin-bottom: 56px; }
+.section-head.center { align-items: center; text-align: center; }
+.section-title { font-size: clamp(2.2rem, 4.2vw, 3.5rem); line-height: 1.05; color: var(--fg); margin: 0; max-width: 14ch; }
