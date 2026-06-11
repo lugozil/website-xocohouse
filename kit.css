@@ -14,7 +14,7 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ---------- shared primitives ---------- */
 .eyebrow {
-  font-size: 13.5px; font-weight: 600; letter-spacing: 0.3em;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.3em;
   text-transform: uppercase; color: var(--accent);
 }
 .eyebrow.on-dark { color: var(--xh-terracotta-500); }
@@ -23,11 +23,10 @@ button { font-family: inherit; cursor: pointer; }
 .rule.on-dark { background: rgba(249,248,246,0.3); }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
-@media (max-width: 600px) { .container { padding: 0 20px; } }
 
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
-  font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap;
   padding: 16px 32px; border-radius: var(--radius-md); border: 1px solid transparent;
   transition: background var(--dur) var(--ease-out), color var(--dur) var(--ease-out),
               border-color var(--dur) var(--ease-out), transform var(--dur-fast) var(--ease-out);
@@ -57,4 +56,4 @@ image-slot { display: block; }
 .section.tight { padding: 96px 0; }
 .section-head { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; margin-bottom: 56px; }
 .section-head.center { align-items: center; text-align: center; }
-.section-title { font-size: clamp(2.2rem, 4.2vw, 3.5rem); line-height: 1.05; color: var(--fg); margin: 0; max-width: 14ch; }
+.section-title { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.05; color: var(--fg); margin: 0; max-width: 14ch; }

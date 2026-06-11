@@ -1,0 +1,218 @@
+/* ============================================================
+   XOCO HOUSE — "Apple-grade" elevation layer
+   Built on top of colors_and_type.css + kit.css.
+   Adds: immersive section rhythm, bento system, pill controls,
+   chevron text-links, and scroll-reveal motion.
+   Keeps the warm XOCO palette + serif/sans typography intact.
+   ============================================================ */
+
+:root {
+  /* Soft, Apple-like radii for the bento system (the brand stays
+     sharp elsewhere; rounding is reserved for these containers). */
+  --r-bento: 28px;
+  --r-card:  20px;
+  --r-pill:  999px;
+
+  /* Calmer, more cinematic motion than the base kit */
+  --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-reveal: 1100ms;
+}
+
+/* ---------- Page rhythm: more air everywhere ---------- */
+.section { padding: 140px 0; }
+.section.tight { padding: 104px 0; }
+@media (max-width: 768px) {
+  .section { padding: 88px 0; }
+  .section.tight { padding: 64px 0; }
+}
+
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
+.wrap-narrow { max-width: 980px; margin: 0 auto; padding: 0 40px; }
+@media (max-width: 640px) { .wrap, .wrap-narrow { padding: 0 22px; } }
+
+/* ============================================================
+   TYPE — crisp Apple hierarchy, XOCO serif/sans
+   ============================================================ */
+.kicker {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.kicker.on-dark { color: var(--xh-terracotta-500); }
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: 1.04;
+  color: var(--fg);
+  margin: 0;
+  text-wrap: balance;
+}
+.headline.xl { font-size: clamp(2.8rem, 6.6vw, 5.5rem); }
+.headline.lg { font-size: clamp(2.3rem, 4.8vw, 4rem); }
+.headline.md { font-size: clamp(1.9rem, 3.4vw, 3rem); }
+.headline.on-dark { color: var(--xh-bone); }
+
+.lede {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+  line-height: 1.65;
+  color: var(--fg-2);
+  margin: 0;
+  text-wrap: pretty;
+}
+.lede.on-dark { color: rgba(249,248,246,0.82); }
+
+/* ============================================================
+   CONTROLS — pill buttons + chevron text links (Apple cadence)
+   ============================================================ */
+.pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 14px; font-weight: 600; letter-spacing: 0.02em;
+  padding: 15px 30px; border-radius: var(--r-pill);
+  border: 1px solid transparent; white-space: nowrap;
+  transition: background var(--dur) var(--ease-soft), color var(--dur) var(--ease-soft),
+              border-color var(--dur) var(--ease-soft), transform 200ms var(--ease-soft);
+}
+.pill:active { transform: scale(0.97); }
+.pill-solid { background: var(--accent); color: var(--xh-bone); }
+.pill-solid:hover { background: var(--accent-hover); }
+.pill-ghost { background: transparent; color: var(--fg); border-color: var(--xh-stone-400); }
+.pill-ghost:hover { background: var(--fg); color: var(--xh-bone); border-color: var(--fg); }
+.pill-ghost.on-dark { color: var(--xh-bone); border-color: rgba(249,248,246,0.45); }
+.pill-ghost.on-dark:hover { background: var(--xh-bone); color: var(--xh-ink-900); border-color: var(--xh-bone); }
+.pill-glass {
+  background: rgba(28,24,21,0.34); color: var(--xh-bone);
+  border-color: rgba(249,248,246,0.5);
+}
+.pill-glass:hover { background: var(--xh-bone); color: var(--xh-ink-900); border-color: var(--xh-bone); }
+
+/* chevron text link — the signature Apple "Learn more ›" */
+.clink {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-sans); font-size: 15px; font-weight: 500;
+  letter-spacing: 0.01em; color: var(--accent);
+  transition: color var(--dur) var(--ease-soft);
+}
+.clink::after {
+  content: '›'; font-size: 19px; line-height: 1; transform: translateY(-1px);
+  transition: transform var(--dur) var(--ease-soft);
+}
+.clink:hover { color: var(--accent-press); }
+.clink:hover::after { transform: translate(4px, -1px); }
+.clink.on-dark { color: var(--xh-terracotta-500); }
+.clink.on-dark:hover { color: var(--xh-clay-500); }
+
+.link-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 34px; }
+
+/* ============================================================
+   CHAPTER — Apple's centered "statement + twin links" block
+   ============================================================ */
+.chapter { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.chapter .kicker { margin-bottom: 2px; }
+.chapter .lede { max-width: 52ch; }
+.chapter .link-row { justify-content: center; margin-top: 4px; }
+
+/* ============================================================
+   BENTO — rounded containers, generous negative space
+   ============================================================ */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  grid-auto-flow: dense;
+}
+.bento-card {
+  position: relative;
+  border-radius: var(--r-bento);
+  overflow: hidden;
+  background: var(--xh-sand-200);
+  min-height: 300px;
+  display: flex;
+  isolation: isolate;
+}
+.bento-card.col-2 { grid-column: span 2; }
+.bento-card.col-3 { grid-column: span 3; }
+.bento-card.col-4 { grid-column: span 4; }
+.bento-card.col-6 { grid-column: span 6; }
+.bento-card.row-2 { grid-row: span 2; }
+.bento-card.tall { min-height: 620px; }
+.bento-card.short { min-height: 300px; }
+
+.bento-media { position: absolute; inset: 0; overflow: hidden; z-index: -1; }
+.bento-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 900ms var(--ease-soft); }
+.bento-card:hover .bento-media img { transform: scale(1.045); }
+.bento-scrim::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(0deg, rgba(18,16,14,0.72) 0%, rgba(18,16,14,0.18) 46%, rgba(18,16,14,0) 72%);
+}
+.bento-scrim-soft::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(0deg, rgba(18,16,14,0.5) 0%, rgba(18,16,14,0) 55%);
+}
+
+/* text block that sits inside a bento card */
+.bento-body { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 10px; padding: 38px; margin-top: auto; }
+.bento-body.top { margin-top: 0; margin-bottom: auto; }
+.bento-eyebrow { font-family: var(--font-sans); font-size: 11.5px; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--xh-terracotta-500); }
+.bento-title { font-family: var(--font-display); font-size: clamp(1.5rem, 2.2vw, 2.1rem); line-height: 1.1; color: var(--xh-bone); margin: 0; }
+.bento-sub { font-family: var(--font-sans); font-size: 14.5px; line-height: 1.6; color: rgba(249,248,246,0.82); margin: 0; max-width: 32ch; }
+
+/* a "solid" bento card (no photo) — pale surface with dark text */
+.bento-card.solid { background: var(--xh-white); border: 1px solid var(--border-soft); }
+.bento-card.solid-ink { background: var(--xh-ink-900); }
+.bento-card.solid-clay { background: var(--accent); }
+.bento-card.solid .bento-title { color: var(--fg); }
+.bento-card.solid .bento-sub { color: var(--fg-2); }
+.bento-card.solid .bento-eyebrow { color: var(--accent); }
+
+@media (max-width: 980px) {
+  .bento { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .bento-card.col-3 { grid-column: span 2; }
+  .bento-card.col-4 { grid-column: span 4; }
+  .bento-card.tall { min-height: 480px; }
+}
+@media (max-width: 640px) {
+  .bento { grid-template-columns: 1fr; }
+  .bento-card.col-2, .bento-card.col-3, .bento-card.col-4, .bento-card.col-6 { grid-column: span 1; }
+  .bento-card { min-height: 340px; }
+  .bento-card.tall { min-height: 440px; }
+  .bento-body { padding: 28px; }
+}
+
+/* ============================================================
+   SCROLL REVEAL — fade-up + cinematic image scale-settle.
+   The hidden pre-state is "armed" by JS (reveal.js adds .armed only when it
+   has successfully hooked the element up). So with no JS / no IntersectionObserver
+   / print, nothing is ever armed and ALL content stays fully visible — no trap.
+   ============================================================ */
+.reveal-img { overflow: hidden; }
+
+html.js .reveal.armed {
+  opacity: 0;
+  transform: translateY(42px);
+  transition: opacity var(--dur-reveal) var(--ease-soft), transform var(--dur-reveal) var(--ease-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+html.js .reveal.armed.in { opacity: 1; transform: none; }
+
+html.js .reveal-img.armed img {
+  transform: scale(1.09);
+  transition: transform 1500ms var(--ease-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+html.js .reveal-img.armed.in img { transform: scale(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal.armed, html.js .reveal.armed.in { opacity: 1; transform: none; }
+  html.js .reveal-img.armed img, html.js .reveal-img.armed.in img { transform: none; }
+}
+
+/* tighten the base section-title helper a touch in this layer */
+.section-title { letter-spacing: -0.005em; }
