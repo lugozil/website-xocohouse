@@ -131,14 +131,6 @@
     );
   }
 
-  useEffect(() => {
-    const t = setTimeout(() => {
-      document.querySelectorAll('.rise').forEach(el => el.classList.add('in'));
-      if (window.initReveal) window.initReveal();
-    }, 60);
-    return () => clearTimeout(t);
-  }, []);
-
   function App() {
     useEffect(() => {
       const t = setTimeout(() => {
