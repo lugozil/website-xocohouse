@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thank You — Xoco House Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="colors_and_type.css" />
+<link rel="stylesheet" href="kit.css" />
+<link rel="stylesheet" href="apple.css" />
+</head>
+<body>
+<div id="root"></div>
+
+<script src="reveal.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="Nav.jsx"></script>
+<script type="text/babel" src="Footer.jsx"></script>
+
+<script type="text/babel">
+  const { useEffect } = React;
+
+  function ThankYou() {
+    return (
+      <React.Fragment>
+        <Nav solid={true} />
+
+        <section className="ty-section">
+          <div className="ty-media">
+            <img src="assets/photos/wedding-dance.webp" alt="A couple's first dance at Xoco House" />
+            <div className="ty-scrim"></div>
+          </div>
+
+          <div className="ty-inner rise">
+            <img
+              src="assets/monogram-simple-white.png"
+              alt="Xoco House Gallery"
+              className="ty-mono"
+            />
+            <div className="eyebrow on-dark" style={{ letterSpacing: '0.34em' }}>Message Received</div>
+            <h1 className="serif ty-title">Thank you for reaching out.</h1>
+            <p className="ty-sub">
+              Our events team will be in touch within two business days
+              to schedule your private tour of the gallery and lounge.
+            </p>
+            <div className="ty-actions">
+              <a className="pill pill-solid" href="gallery.html">View the Gallery</a>
+              <a className="pill pill-glass" href="index.html">Back to Home</a>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+
+        <style>{`
+          .ty-section {
+            position: relative;
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--xh-bone);
+            overflow: hidden;
+            padding: 140px 24px 100px;
+          }
+          .ty-media {
+            position: absolute;
+            inset: 0;
+            background: var(--xh-ink-800);
+            z-index: -1;
+          }
+          .ty-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.72;
+          }
+          .ty-scrim {
+            position: absolute;
+            inset: 0;
+            background:
+              radial-gradient(125% 95% at 50% 40%, rgba(16,14,12,0.78) 0%, rgba(16,14,12,0.5) 44%, rgba(16,14,12,0.28) 72%),
+              linear-gradient(0deg, rgba(16,14,12,0.7) 0%, rgba(16,14,12,0) 36%);
+          }
+          .ty-inner {
+            position: relative;
+            max-width: 680px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+          }
+          .ty-mono {
+            height: 72px;
+            margin-bottom: 8px;
+            opacity: 0.92;
+          }
+          .ty-title {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1.05;
+            margin: 4px 0 0;
+            color: var(--xh-bone);
+            text-shadow: 0 2px 40px rgba(10,9,8,0.4);
+          }
+          .ty-sub {
+            font-size: clamp(1rem, 1.3vw, 1.15rem);
+            line-height: 1.72;
+            color: rgba(249,248,246,0.88);
+            max-width: 46ch;
+            margin: 4px 0 6px;
+          }
+          .ty-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 8px;
+          }
+          @media (max-width: 600px) {
+            .ty-mono { height: 56px; }
+            .ty-actions .pill { padding: 14px 24px; }
+          }
+        `}</style>
+      </React.Fragment>
+    );
+  }
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      document.querySelectorAll('.rise').forEach(el => el.classList.add('in'));
+      if (window.initReveal) window.initReveal();
+    }, 60);
+    return () => clearTimeout(t);
+  }, []);
+
+  function App() {
+    useEffect(() => {
+      const t = setTimeout(() => {
+        document.querySelectorAll('.rise').forEach(el => el.classList.add('in'));
+        if (window.initReveal) window.initReveal();
+      }, 60);
+      return () => clearTimeout(t);
+    }, []);
+    return <ThankYou />;
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
