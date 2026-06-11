@@ -1,9 +1,12 @@
-// Contact page — inquiry form with a success state, plus venue info.
+// Contact page — dopymes embedded form + venue info.
 function ContactSection() {
-  const [sent, setSent] = React.useState(false);
-  const [form, setForm] = React.useState({ name: '', email: '', type: 'Wedding', guests: '', date: '', note: '' });
-  const set = (k) => (e) => setForm(f => ({ ...f, [k]: e.target.value }));
-  const types = ['Wedding', 'Quinceañera', 'Corporate Event', 'Cocktail Party', 'Other Celebration'];
+  React.useEffect(() => {
+    if (!document.querySelector('script[src="https://in.dopymes.com/js/form_embed.js"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://in.dopymes.com/js/form_embed.js';
+      document.body.appendChild(s);
+    }
+  }, []);
 
   return (
     <section className="section contact-sec" data-screen-label="Contact">
@@ -28,32 +31,23 @@ function ContactSection() {
         </div>
 
         <div className="contact-card">
-          {sent ? (
-            <div className="contact-success rise">
-              <img src="assets/monogram-simple-black.png" alt="" style={{ height: 80, margin: '0 auto 22px' }} />
-              <h3 className="serif" style={{ fontSize: 30, margin: '0 0 12px' }}>Thank you, {form.name.split(' ')[0] || 'friend'}.</h3>
-              <p>Your request is in. Our events team will reach out within two business days to schedule your tour.</p>
-              <button className="btn btn-ghost" style={{ marginTop: 20 }} onClick={() => { setSent(false); setForm({ name: '', email: '', type: 'Wedding', guests: '', date: '', note: '' }); }}>Send another</button>
-            </div>
-          ) : (
-            <form onSubmit={(e) => { e.preventDefault(); setSent(true); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-              <div className="fld"><label>Full name</label><input required value={form.name} onChange={set('name')} placeholder="Your name" /></div>
-              <div className="fld-row">
-                <div className="fld"><label>Email</label><input required type="email" value={form.email} onChange={set('email')} placeholder="you@email.com" /></div>
-                <div className="fld"><label>Event date</label><input type="text" value={form.date} onChange={set('date')} placeholder="Month / year" /></div>
-              </div>
-              <div className="fld-row">
-                <div className="fld"><label>Event type</label>
-                  <select value={form.type} onChange={set('type')}>
-                    {types.map(t => <option key={t}>{t}</option>)}
-                  </select>
-                </div>
-                <div className="fld"><label>Guest count</label><input value={form.guests} onChange={set('guests')} placeholder="Approximate" /></div>
-              </div>
-              <div className="fld"><label>Tell us more</label><textarea rows="4" value={form.note} onChange={set('note')} placeholder="A little about your event…"></textarea></div>
-              <button className="btn btn-primary" type="submit" style={{ width: '100%', justifyContent: 'center', marginTop: 8 }}>Request a Tour</button>
-            </form>
-          )}
+          <iframe
+            src="https://in.dopymes.com/widget/form/u5okQTSv5EolMvMYUWk1"
+            style={{ width: '100%', height: '544px', border: 'none', borderRadius: '0px' }}
+            id="inline-u5okQTSv5EolMvMYUWk1"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Website form"
+            data-height="544"
+            data-layout-iframe-id="inline-u5okQTSv5EolMvMYUWk1"
+            data-form-id="u5okQTSv5EolMvMYUWk1"
+            title="Website form"
+          />
         </div>
       </div>
       <style>{`
@@ -71,22 +65,9 @@ function ContactSection() {
         .contact-meta dd a:hover { color: var(--accent); }
         .contact-photo { margin: 0; aspect-ratio: 16/10; overflow: hidden; background: var(--xh-sand-200); }
         .contact-photo img { width: 100%; height: 100%; object-fit: cover; }
-        .contact-card { background: var(--xh-white); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); padding: 40px; }
-        .fld { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
-        .fld-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .fld label { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--fg-2); }
-        .fld input, .fld select, .fld textarea { font-family: var(--font-sans); font-size: 14.5px; color: var(--fg); background: var(--xh-white); border: 1px solid var(--xh-stone-300); border-radius: var(--radius-md); padding: 13px 14px; transition: border-color var(--dur), box-shadow var(--dur); }
-        .fld input::placeholder, .fld textarea::placeholder { color: var(--xh-stone-400); }
-        .fld input:focus, .fld select:focus, .fld textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(144,104,72,0.13); }
-        .fld textarea { resize: vertical; }
-        .contact-success { text-align: center; padding: 16px 0; }
-        .contact-success p { font-size: 15px; line-height: 1.7; color: var(--fg-2); max-width: 38ch; margin: 0 auto; }
+        .contact-card { background: var(--xh-white); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); overflow: hidden; }
         @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
-        @media (max-width: 460px) {
-          .contact-meta { gap: 22px 24px; }
-          .contact-card { padding: 26px 22px; }
-          .fld-row { grid-template-columns: 1fr; gap: 0; }
-        }
+        @media (max-width: 460px) { .contact-meta { gap: 22px 24px; } }
       `}</style>
     </section>
   );
