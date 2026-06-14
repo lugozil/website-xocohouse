@@ -53,7 +53,7 @@ function AboutValues() {
           ))}
         </div>
         <div className="vals-cta">
-          <p className="vals-cta-p">Ready to start planning? Call us at <a href="tel:+13124690141" className="vals-phone">(312) 469-0141</a> or <a className="clink" href="contact.html">send us a message</a>.</p>
+          <p className="vals-cta-p">Ready to start planning? Call us at <a href="tel:+16306647283" className="vals-phone">(630) 664-7283</a> or <a className="clink" href="contact.html">send us a message</a>.</p>
         </div>
       </div>
       <style>{`

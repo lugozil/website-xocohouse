@@ -5,7 +5,7 @@ function Footer() {
       <div className="container">
         <div className="ft-cta">
           <h3 className="serif">Let&rsquo;s plan something unforgettable.</h3>
-          <a className="btn btn-ghost on-dark" href="contact.html">Book a Tour</a>
+          <a className="btn btn-primary" href="contact.html">Book a Tour</a>
         </div>
         <div className="ft-top">
           <div className="ft-brand">
@@ -29,7 +29,7 @@ function Footer() {
               <span className="ft-h">Visit</span>
               <a href="https://maps.google.com/?q=2317+W+18th+St+Chicago+IL+60608" target="_blank" rel="noopener">2317 W. 18th St.</a>
               <a href="https://maps.google.com/?q=2317+W+18th+St+Chicago+IL+60608" target="_blank" rel="noopener">Chicago, IL 60608</a>
-              <a href="tel:+13124690141">312-469-0141</a>
+              <a href="tel:+16306647283">630-664-7283</a>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 12px; font-weight: 600; letter-spacing: 0.3em;
   text-transform: uppercase; color: var(--accent);
 }
-.eyebrow.on-dark { color: var(--xh-terracotta-500); }
+.eyebrow.on-dark { color: var(--xh-bone); }
 .serif { font-family: var(--font-display); font-weight: 400; letter-spacing: 0.01em; }
 .rule { width: 56px; height: 1px; background: var(--xh-stone-300); border: 0; margin: 0; }
 .rule.on-dark { background: rgba(249,248,246,0.3); }
