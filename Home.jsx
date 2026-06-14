@@ -2,14 +2,24 @@
 // Intro · EventTypes (bento) · FeatureBand · SpacesPreview · Quote.
 
 function Intro() {
+  const blocks = [
+    ['Versatility', 'A versatile, open-concept venue with a customizable floor plan designed to accommodate any celebration—from weddings and quinceañeras to birthdays, anniversaries, corporate events, and special gatherings. Transform the space to match your vision and bring your creativity and imagination to life.'],
+    ['Atmosphere', 'Where rustic-modern charm meets timeless elegance. Whether your style is sophisticated or simple, our versatile space allows you to tailor every detail and bring your dream celebration to life—creating unforgettable memories that will last a lifetime.'],
+    ['Setting', 'Artful natural light and artwork create a distinctive setting that inspires conversation, connection, and celebration. The fusion of art and architecture provides a sophisticated yet welcoming atmosphere.'],
+  ];
   return (
     <section className="section" id="intro" data-screen-label="Intro">
       <div className="wrap-narrow chapter reveal">
-        <div className="kicker">Discover Xoco House</div>
-        <h2 className="headline lg">Where rustic charm meets contemporary elegance.</h2>
-        <p className="lede">Set in Chicago&rsquo;s vibrant Pilsen neighborhood, Xoco House seamlessly blends artistic
-          expression with elegant celebration. A spacious open floor plan, soaring timber ceilings and an
-          abundance of natural light give the venue a grand, contemporary character with a warm vintage soul.</p>
+        <div className="kicker">Discover Xoco House Gallery</div>
+        <h2 className="headline lg">Your celebration, your vision.</h2>
+        <div className="intro-blocks">
+          {blocks.map(([tag, text], i) => (
+            <div className="intro-block reveal" key={tag} style={{ '--reveal-delay': (i * 90) + 'ms' }}>
+              <span className="intro-block-tag">{tag}</span>
+              <p className="lede">{text}</p>
+            </div>
+          ))}
+        </div>
         <div className="link-row">
           <a className="clink" href="about.html">About the space</a>
           <a className="clink" href="amenities.html">Explore amenities</a>
@@ -23,6 +33,10 @@ function Intro() {
       <style>{`
         .intro-show { margin: 84px 0 0; border-radius: var(--r-bento); overflow: hidden; aspect-ratio: 16/8; background: var(--xh-sand-200); }
         .intro-show img { width: 100%; height: 100%; object-fit: cover; }
+        .intro-blocks { display: flex; flex-direction: column; gap: 30px; margin: 36px 0 36px; }
+        .intro-block { border-left: 2px solid var(--accent); padding-left: 22px; }
+        .intro-block-tag { display: block; font-size: 10.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+        .intro-block .lede { margin: 0; }
         @media (max-width: 768px) { .intro-show { margin-top: 52px; aspect-ratio: 4/3; } }
       `}</style>
     </section>
@@ -78,7 +92,7 @@ function FeatureBand() {
       <div className="wrap fband-inner reveal">
         <div className="kicker on-dark">An Open Canvas</div>
         <h2 className="headline lg on-dark fband-title">Your celebration, exactly as you imagine it.</h2>
-        <p className="lede on-dark fband-p">Soaring trusses, skylights and an uninterrupted floor plan make Xoco House
+        <p className="lede on-dark fband-p">Soaring trusses, skylights and an uninterrupted floor plan make Xoco House Gallery
           as fitting for a wedding ceremony as it is for a milestone celebration.</p>
         <div className="link-row">
           <a className="pill pill-glass" href="amenities.html">Explore Amenities</a>
@@ -139,7 +153,7 @@ function Quote() {
         <div className="kicker on-dark">From Our Hosts</div>
         <blockquote className="headline md on-dark quote-q">&ldquo;Our guests are still talking about the room.
           Every celebration here feels like it was made for this space.&rdquo;</blockquote>
-        <div className="quote-by">A recent celebration at Xoco House</div>
+        <div className="quote-by">A recent celebration at Xoco House Gallery</div>
       </div>
       <style>{`
         .quote-sec { background: var(--xh-ink-900); }

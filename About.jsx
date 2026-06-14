@@ -16,7 +16,7 @@ function AboutStory() {
             life of the room, lending every event an unmistakable sense of creativity and warmth.</p>
         </div>
         <div className="about-media">
-          <img src="assets/photos/quince-family.webp" alt="A quinceañera and her family gathered together at Xoco House" />
+          <img src="assets/photos/quince-family.webp" alt="A quinceañera and her family gathered together at Xoco House Gallery" />
         </div>
       </div>
       <style>{`
@@ -52,6 +52,9 @@ function AboutValues() {
             </div>
           ))}
         </div>
+        <div className="vals-cta">
+          <p className="vals-cta-p">Ready to start planning? Call us at <a href="tel:+13124690141" className="vals-phone">(312) 469-0141</a> or <a className="clink" href="contact.html">send us a message</a>.</p>
+        </div>
       </div>
       <style>{`
         .vals-sec { background: var(--xh-bone); }
@@ -60,6 +63,10 @@ function AboutValues() {
         .val-n { display: block; font-size: 15px; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 16px; }
         .val-t { font-size: 26px; margin: 0 0 12px; color: var(--fg); }
         .val-d { font-size: 15px; line-height: 1.72; color: var(--fg-2); margin: 0; }
+        .vals-cta { margin-top: 48px; text-align: center; }
+        .vals-cta-p { font-size: 17px; line-height: 1.6; color: var(--fg-2); margin: 0; }
+        .vals-phone { color: var(--accent); font-weight: 500; text-decoration: none; }
+        .vals-phone:hover { text-decoration: underline; }
         @media (max-width: 860px) { .vals-grid { grid-template-columns: 1fr; } }
       `}</style>
     </section>

@@ -32,7 +32,7 @@ function Hero() {
       </div>
 
       <div className="ah-inner rise">
-        <div className="kicker on-dark">Xoco House · Pilsen, Chicago</div>
+        <div className="kicker on-dark">Xoco House Gallery · Pilsen, Chicago</div>
         <h1 className="headline xl on-dark ah-title">Where art &amp;<br />celebration collide.</h1>
         <p className="lede on-dark ah-sub">A gallery-style event venue beneath soaring timber and skylights —
           an open canvas for weddings, quinceañeras and every celebration in between.</p>

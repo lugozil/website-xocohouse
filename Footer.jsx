@@ -9,7 +9,7 @@ function Footer() {
         </div>
         <div className="ft-top">
           <div className="ft-brand">
-            <img src="assets/monogram-simple-white.png" alt="Xoco House Gallery" className="ft-mono" />
+            <img src="assets/logo-horizontal-white.png" alt="Xoco House Gallery" className="ft-mono" />
             <p className="ft-tag serif">A space where every moment comes to life.</p>
           </div>
           <div className="ft-cols">
@@ -44,7 +44,7 @@ function Footer() {
           padding: 80px 0; border-bottom: 1px solid rgba(249,248,246,0.14); }
         .ft-cta h3 { font-size: clamp(1.7rem, 3.2vw, 2.6rem); margin: 0; color: var(--xh-bone); max-width: 18ch; }
         .ft-top { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; padding: 64px 0; border-bottom: 1px solid rgba(249,248,246,0.14); }
-        .ft-mono { height: 72px; margin-bottom: 22px; }
+        .ft-mono { height: 30px; margin-bottom: 22px; }
         .ft-tag { font-size: 21px; line-height: 1.3; max-width: 16ch; color: var(--xh-bone); margin: 0; }
         .ft-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
         .ft-col { display: flex; flex-direction: column; gap: 13px; }
