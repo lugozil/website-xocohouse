@@ -1,10 +1,10 @@
 // PageHero — compact hero for interior pages. Photo background + scrim + title block.
 // Text anchored bottom-left, editorial style.
-function PageHero({ eyebrow, title, sub, photo, alt }) {
+function PageHero({ eyebrow, title, sub, photo, alt, objectPosition }) {
   return (
     <section className="phero" data-screen-label={title}>
       <div className="phero-media">
-        <img src={photo} alt={alt || title} />
+        <img src={photo} alt={alt || title} style={objectPosition ? { objectPosition } : undefined} />
         <div className="phero-scrim"></div>
       </div>
       <div className="phero-inner rise">

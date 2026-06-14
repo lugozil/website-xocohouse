@@ -35,7 +35,7 @@ function Hero() {
         <div className="kicker on-dark">Xoco House Gallery · Pilsen, Chicago</div>
         <h1 className="headline xl on-dark ah-title">Where art &amp;<br />celebration collide.</h1>
         <p className="lede on-dark ah-sub">A gallery-style event venue beneath soaring timber and skylights —
-          an open canvas for weddings, quinceañeras and every celebration in between.</p>
+          an open canvas for weddings, quinceañeras, and every celebration in between.</p>
         <div className="ah-actions">
           <a className="pill pill-solid" href="contact.html">Book a Tour</a>
           <a className="pill pill-glass" href="gallery.html">View the Gallery</a>
@@ -60,21 +60,20 @@ function Hero() {
       </a>
 
       <style>{`
-        .ah { position: relative; isolation: isolate; min-height: 100svh; display: flex; align-items: center; justify-content: center;
-          text-align: center; color: var(--xh-bone); overflow: hidden; padding: 120px 24px 100px; }
+        .ah { position: relative; isolation: isolate; min-height: 100svh; display: flex; align-items: flex-end;
+          color: var(--xh-bone); overflow: hidden; padding: 120px 0 100px; }
         .ah-media { position: absolute; inset: 0; background: var(--xh-ink-800); z-index: -1; }
         .ah-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
           opacity: 0; transform: scale(1.06); transition: opacity 1600ms var(--ease-soft), transform 11s linear; }
         .ah-slide.on { opacity: 1; transform: scale(1); }
         @media (prefers-reduced-motion: reduce) { .ah-slide { transition: opacity 600ms ease; transform: none; } .ah-slide.on { transform: none; } }
         .ah-scrim { position: absolute; inset: 0; pointer-events: none; background:
-          radial-gradient(125% 95% at 50% 40%, rgba(16,14,12,0.7) 0%, rgba(16,14,12,0.42) 44%, rgba(16,14,12,0.2) 72%),
-          linear-gradient(0deg, rgba(16,14,12,0.6) 0%, rgba(16,14,12,0) 32%),
-          linear-gradient(180deg, rgba(16,14,12,0.5) 0%, rgba(16,14,12,0) 26%); }
-        .ah-inner { position: relative; max-width: 880px; display: flex; flex-direction: column; align-items: center; gap: 24px; }
-        .ah-title { margin: 6px 0 2px; text-shadow: 0 2px 40px rgba(10,9,8,0.35); }
-        .ah-sub { max-width: 46ch; }
-        .ah-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+          linear-gradient(0deg, rgba(16,14,12,0.85) 0%, rgba(16,14,12,0.28) 48%, rgba(16,14,12,0.32) 100%),
+          linear-gradient(90deg, rgba(16,14,12,0.5) 0%, rgba(16,14,12,0) 65%); }
+        .ah-inner { position: relative; max-width: 820px; padding: 0 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
+        .ah-title { margin: 4px 0 2px; text-shadow: 0 2px 40px rgba(10,9,8,0.3); max-width: 14ch; }
+        .ah-sub { max-width: 44ch; }
+        .ah-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 6px; }
         .ah-dots { position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 2; }
         .ah-dot { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 999px; cursor: pointer;
           background: rgba(249,248,246,0.4); transition: background var(--dur), transform var(--dur); }
