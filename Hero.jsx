@@ -32,8 +32,10 @@ function Hero() {
       </div>
 
       <div className="ah-inner rise">
-        <div className="kicker on-dark">Xoco House Gallery</div>
-        <h1 className="headline xl on-dark ah-title">Where art &amp;<br />celebration collide.</h1>
+        <div className="ah-text">
+          <div className="kicker on-dark">Xoco House Gallery</div>
+          <h1 className="headline xl on-dark ah-title">Where art &amp;<br />celebration collide.</h1>
+        </div>
         <div className="ah-actions">
           <a className="pill pill-solid" href="contact.html">Book a Tour</a>
           <a className="pill pill-glass" href="gallery.html">View the Gallery</a>
@@ -69,6 +71,7 @@ function Hero() {
           linear-gradient(0deg, rgba(16,14,12,0.85) 0%, rgba(16,14,12,0.28) 48%, rgba(16,14,12,0.32) 100%),
           linear-gradient(90deg, rgba(16,14,12,0.5) 0%, rgba(16,14,12,0) 65%); }
         .ah-inner { position: relative; max-width: 820px; padding: 0 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
+        .ah-text { display: flex; flex-direction: column; gap: 22px; }
         .ah-title { margin: 4px 0 2px; text-shadow: 0 2px 40px rgba(10,9,8,0.3); max-width: 14ch; }
         .ah-sub { max-width: 44ch; }
         .ah-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 6px; }
@@ -86,7 +89,7 @@ function Hero() {
         @media (prefers-reduced-motion: reduce) { .ah-chev { animation: none; } }
         @media (max-width: 900px) { .ah-scroll { display: none; } }
         @media (max-height: 680px) { .ah-scroll { display: none; } }
-        @media (max-width: 600px) { .ah { padding-top: 132px; padding-bottom: 96px; } .ah-actions { flex-wrap: nowrap; } .ah-actions .pill { padding: 13px 20px; font-size: 13px; } .ah-dots { bottom: 26px; } }
+        @media (max-width: 600px) { .ah { padding-top: 132px; padding-bottom: 96px; align-items: stretch; } .ah-inner { justify-content: space-between; } .ah-title { font-size: 2rem; } .ah-actions { flex-wrap: nowrap; margin-top: 0; } .ah-actions .pill { padding: 13px 20px; font-size: 13px; } .ah-dots { bottom: 26px; } }
       `}</style>
     </section>
   );
