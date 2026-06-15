@@ -32,10 +32,8 @@ function Hero() {
       </div>
 
       <div className="ah-inner rise">
-        <div className="kicker on-dark">Xoco House Gallery · Pilsen, Chicago</div>
+        <div className="kicker on-dark">Xoco House Gallery</div>
         <h1 className="headline xl on-dark ah-title">Where art &amp;<br />celebration collide.</h1>
-        <p className="lede on-dark ah-sub">A gallery-style event venue beneath soaring timber and skylights —
-          an open canvas for weddings, quinceañeras, and every celebration in between.</p>
         <div className="ah-actions">
           <a className="pill pill-solid" href="contact.html">Book a Tour</a>
           <a className="pill pill-glass" href="gallery.html">View the Gallery</a>
@@ -88,7 +86,7 @@ function Hero() {
         @media (prefers-reduced-motion: reduce) { .ah-chev { animation: none; } }
         @media (max-width: 900px) { .ah-scroll { display: none; } }
         @media (max-height: 680px) { .ah-scroll { display: none; } }
-        @media (max-width: 600px) { .ah { padding-top: 132px; padding-bottom: 96px; } .ah-actions .pill { padding: 14px 26px; } .ah-dots { bottom: 26px; } }
+        @media (max-width: 600px) { .ah { padding-top: 132px; padding-bottom: 96px; } .ah-actions { flex-wrap: nowrap; } .ah-actions .pill { padding: 13px 20px; font-size: 13px; } .ah-dots { bottom: 26px; } }
       `}</style>
     </section>
   );
