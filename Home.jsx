@@ -51,7 +51,7 @@ function EventTypes() {
       d: 'A once-in-a-lifetime celebration, styled exactly as she imagined it.' },
     { cls: 'col-3', src: 'assets/photos/mingling.webp', n: 'Corporate & Socials',
       d: 'Launches, dinners and mixers within a refined, endlessly configurable floor plan.' },
-    { cls: 'col-6 short', src: 'assets/photos/cocktail-bar.webp', n: 'Cocktails & Receptions',
+    { cls: 'col-6 short', src: 'assets/photos/bar.webp', n: 'Cocktails & Receptions',
       d: 'Intimate gatherings wrapped in a relaxed, art-filled gallery atmosphere.' },
   ];
   return (

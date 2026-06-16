@@ -67,7 +67,7 @@ function Nav({ active, solid }) {
         .nav-cta { padding: 11px 22px; }
         .nav:not(.nav-solid) .nav-cta { background: var(--xh-bone); color: var(--xh-ink-900); }
         .nav:not(.nav-solid) .nav-cta:hover { background: var(--xh-white); }
-        .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: 0; padding: 8px; }
+        .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: 0; padding: 8px; margin-left: auto; }
         .nav-burger span { width: 24px; height: 1.5px; display: block; transition: transform var(--dur), opacity var(--dur), background var(--dur); }
         .nav:not(.nav-solid) .nav-burger span { background: var(--xh-bone); }
         .nav-solid .nav-burger span { background: var(--xh-ink-900); }

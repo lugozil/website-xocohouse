@@ -4,6 +4,8 @@
 const HERO_SLIDES = [
   ['assets/photos/banner.webp', 'A celebration in full swing beneath the draped, light-strung ceiling'],
   ['assets/photos/banner-2.webp', 'The gallery dressed for a quinceañera, daylight pouring through the skylights'],
+  ['assets/photos/fondo-3.webp', 'Xoco House Gallery — an elegant venue ready for your event'],
+  ['assets/photos/fondo-4.webp', 'Xoco House Gallery — celebrating every milestone in style'],
 ];
 
 function Hero() {
