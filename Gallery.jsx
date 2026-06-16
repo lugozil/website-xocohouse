@@ -8,7 +8,7 @@ const GALLERY_PHOTOS = [
   ['assets/photos/wedding-ceremony.webp', 'A wedding ceremony framed by the wedding party', 'Weddings', ''],
   ['assets/photos/quince-family.webp', 'A quinceañera and her family together', 'Quinceañeras', ''],
   ['assets/photos/banner.webp', 'A celebration in full swing under draped lights', 'Quinceañeras', 'wide'],
-  ['assets/photos/cocktail-bar.webp', 'Cocktails and conversation at the gallery bar', 'Socials', ''],
+  ['assets/photos/bar.webp', 'Cocktails and conversation at the gallery bar', 'Socials', ''],
   ['assets/photos/hall-bright.webp', 'A couple in a quiet moment amid the reception', 'Weddings', 'tall'],
   ['assets/photos/quince-dance.webp', 'Guests circling the quinceañera on the floor', 'Quinceañeras', ''],
   ['assets/photos/reception-bw.webp', 'A full reception beneath papel picado', 'Socials', 'wide'],
