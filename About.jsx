@@ -22,7 +22,7 @@ function AboutStory() {
       <style>{`
         .about-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; }
         .about-copy p { font-size: 16.5px; line-height: 1.78; color: var(--fg-2); margin: 22px 0 0; max-width: 46ch; }
-        .about-media { aspect-ratio: 4/5; overflow: hidden; background: var(--xh-sand-200); }
+        .about-media { aspect-ratio: 4/5; overflow: hidden; background: var(--xh-sand-200); border-radius: var(--r-bento); }
         .about-media img { width: 100%; height: 100%; object-fit: cover; }
         @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } .about-media { aspect-ratio: 16/10; } }
       `}</style>

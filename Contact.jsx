@@ -63,7 +63,7 @@ function ContactSection() {
         .contact-meta dd { font-size: 17px; font-family: var(--font-display); color: var(--fg); margin: 0; line-height: 1.35; }
         .contact-meta dd a { color: var(--fg); transition: color var(--dur); word-break: break-word; }
         .contact-meta dd a:hover { color: var(--accent); }
-        .contact-photo { margin: 0; aspect-ratio: 16/10; overflow: hidden; background: var(--xh-sand-200); }
+        .contact-photo { margin: 0; aspect-ratio: 16/10; overflow: hidden; background: var(--xh-sand-200); border-radius: var(--r-bento); }
         .contact-photo img { width: 100%; height: 100%; object-fit: cover; }
         .contact-card { background: var(--xh-white); border: 1px solid var(--border-soft); box-shadow: var(--shadow-md); overflow: hidden; }
         @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }

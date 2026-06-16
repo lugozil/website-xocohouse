@@ -62,7 +62,7 @@ function LoungeFeature() {
       <style>{`
         .lounge-sec { background: var(--xh-sand-100); }
         .lounge-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; }
-        .lounge-media { aspect-ratio: 5/4; overflow: hidden; background: var(--xh-sand-200); }
+        .lounge-media { aspect-ratio: 5/4; overflow: hidden; background: var(--xh-sand-200); border-radius: var(--r-bento); }
         .lounge-media img { width: 100%; height: 100%; object-fit: cover; }
         .lounge-text p { font-size: 16px; line-height: 1.78; color: var(--fg-2); margin: 24px 0 30px; max-width: 44ch; }
         .amen { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
@@ -93,7 +93,7 @@ function AmenitiesStrip() {
       </div>
       <style>{`
         .strip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-        .strip-tile { margin: 0; aspect-ratio: 3/4; overflow: hidden; background: var(--xh-sand-200); }
+        .strip-tile { margin: 0; aspect-ratio: 3/4; overflow: hidden; background: var(--xh-sand-200); border-radius: var(--r-bento); }
         .strip-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms var(--ease-out); }
         .strip-tile:hover img { transform: scale(1.04); }
         @media (max-width: 860px) { .strip-grid { grid-template-columns: 1fr 1fr; } .strip-tile:last-child { grid-column: span 2; aspect-ratio: 16/9; } }
