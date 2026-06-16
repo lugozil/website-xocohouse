@@ -26,7 +26,7 @@ function ContactSection() {
           </dl>
 
           <figure className="contact-photo">
-            <img src="assets/photos/cocktail-bar.webp" alt="Guests gathering for cocktails at the gallery bar" />
+            <img src="assets/photos/bar.webp" alt="Guests gathering for cocktails at the gallery bar" />
           </figure>
         </div>
 

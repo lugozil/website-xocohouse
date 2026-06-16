@@ -76,7 +76,7 @@ function LoungeFeature() {
 
 function AmenitiesStrip() {
   const imgs = [
-    ['assets/photos/cocktail-bar.webp', 'Cocktails and conversation at the gallery bar'],
+    ['assets/photos/bar.webp', 'Cocktails and conversation at the gallery bar'],
     ['assets/photos/quince-pink.webp', 'A quinceañera reception styled in blush and gold'],
     ['assets/photos/quince-portrait.webp', 'A quinceañera beside her lit “15” marquee'],
   ];
