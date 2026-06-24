@@ -26,7 +26,7 @@ function TermsAndConditions() {
             <p>You can cancel the SMS service at any time. Simply text <strong>"STOP"</strong> to the same number that sent you messages. Upon sending "STOP," we will confirm your unsubscribe status via SMS. Following this confirmation, you will no longer receive SMS messages from us. To rejoin, sign up as you did initially, and we will resume sending SMS messages to you.</p>
 
             <h3 className="tc-h3">Support Information</h3>
-            <p>If you experience issues with the messaging program, reply with the keyword <strong>"HELP"</strong> for more assistance, or reach out directly to <a className="tc-link" href="mailto:info@xocohousegallery.com">info@xocohousegallery.com</a> or call <a className="tc-link" href="tel:+13128746699">+1 312-874-6699</a> during business hours.</p>
+            <p>If you experience issues with the messaging program, reply with the keyword <strong>"HELP"</strong> for more assistance, or reach out directly to <a className="tc-link" href="mailto:xocohousegalleryinfo@gmail.com">xocohousegalleryinfo@gmail.com</a> or call <a className="tc-link" href="tel:+13128746699">+1 312-874-6699</a> during business hours.</p>
 
             <h3 className="tc-h3">Carrier Liability</h3>
             <p>Carriers are not liable for delayed or undelivered messages.</p>
@@ -86,7 +86,7 @@ function TermsAndConditions() {
           <div className="tc-section rise in">
             <h2 className="serif tc-h2">Registration &amp; Passwords</h2>
             <p>To access certain features of the Site, you may be required to register and create an account. You agree to provide accurate, current, and complete information during the registration process. You are responsible for maintaining the confidentiality of your login credentials and for all activities conducted under your account.</p>
-            <p>If you suspect unauthorized use of your account, notify us immediately at <a className="tc-link" href="mailto:info@xocohousegallery.com">info@xocohousegallery.com</a>. We are not liable for any loss or damage arising from your failure to comply with this obligation.</p>
+            <p>If you suspect unauthorized use of your account, notify us immediately at <a className="tc-link" href="mailto:xocohousegalleryinfo@gmail.com">xocohousegalleryinfo@gmail.com</a>. We are not liable for any loss or damage arising from your failure to comply with this obligation.</p>
           </div>
 
           {/* Termination */}
@@ -114,7 +114,7 @@ function TermsAndConditions() {
             <div className="tc-contact">
               <strong>XOCO HOUSE GALLERY</strong>
               <a className="tc-link" href="tel:+13128746699">+1 312-874-6699</a>
-              <a className="tc-link" href="mailto:info@xocohousegallery.com">info@xocohousegallery.com</a>
+              <a className="tc-link" href="mailto:xocohousegalleryinfo@gmail.com">xocohousegalleryinfo@gmail.com</a>
               <a className="tc-link" href="https://www.xocohousegallery.com">xocohousegallery.com</a>
             </div>
             <p className="tc-consent">By using our website and services, you consent to these Terms of Service.</p>

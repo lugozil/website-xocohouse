@@ -60,7 +60,7 @@ function PrivacyPolicy() {
             <p>Message frequency varies based on your interactions with our business. Messages will be directly related to the services you have requested. We do not send promotional content without specific consent.</p>
 
             <h3 className="pp-h3">Help &amp; Support</h3>
-            <p>Reply <strong>"HELP"</strong> for assistance or contact us at <a className="pp-link" href="mailto:info@xocohousegallery.com">info@xocohousegallery.com</a>. Customer support is available during regular business hours.</p>
+            <p>Reply <strong>"HELP"</strong> for assistance or contact us at <a className="pp-link" href="mailto:xocohousegalleryinfo@gmail.com">xocohousegalleryinfo@gmail.com</a>. Customer support is available during regular business hours.</p>
 
             <h3 className="pp-h3">Carrier Information</h3>
             <p>Standard message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Supported carriers include AT&amp;T, Verizon, T-Mobile, Sprint, and most regional carriers.</p>
@@ -142,7 +142,7 @@ function PrivacyPolicy() {
             <div className="pp-contact">
               <strong>XOCO HOUSE GALLERY</strong>
               <a className="pp-link" href="tel:+13128746699">+1 312-874-6699</a>
-              <a className="pp-link" href="mailto:info@xocohousegallery.com">info@xocohousegallery.com</a>
+              <a className="pp-link" href="mailto:xocohousegalleryinfo@gmail.com">xocohousegalleryinfo@gmail.com</a>
               <a className="pp-link" href="https://www.xocohousegallery.com">xocohousegallery.com</a>
             </div>
           </div>
