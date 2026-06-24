@@ -35,6 +35,10 @@ function Footer() {
         </div>
         <div className="ft-base">
           <span>© 2026 Xoco House Gallery</span>
+          <div className="ft-legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+          </div>
           <span>Event Gallery · Pilsen, Chicago</span>
         </div>
       </div>
@@ -51,7 +55,10 @@ function Footer() {
         .ft-h { font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--xh-terracotta-500); margin-bottom: 4px; }
         .ft-col a { font-size: 14px; color: rgba(249,248,246,0.72); transition: color var(--dur); }
         .ft-col a:hover { color: var(--xh-bone); }
-        .ft-base { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(249,248,246,0.5); padding-top: 28px; }
+        .ft-base { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(249,248,246,0.5); padding-top: 28px; }
+        .ft-legal { display: flex; gap: 24px; }
+        .ft-legal a { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(249,248,246,0.5); transition: color var(--dur); }
+        .ft-legal a:hover { color: rgba(249,248,246,0.85); }
         @media (max-width: 860px) { .ft-top { grid-template-columns: 1fr; gap: 40px; } .ft-cols { grid-template-columns: 1fr 1fr; } }
       `}</style>
     </footer>
