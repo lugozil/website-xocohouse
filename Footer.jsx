@@ -29,7 +29,7 @@ function Footer() {
               <span className="ft-h">Visit</span>
               <a href="https://maps.google.com/?q=2317+W+18th+St+Chicago+IL+60608" target="_blank" rel="noopener">2317 W. 18th St.</a>
               <a href="https://maps.google.com/?q=2317+W+18th+St+Chicago+IL+60608" target="_blank" rel="noopener">Chicago, IL 60608</a>
-              <a href="tel:+16306647283">630-664-7283</a>
+              <a href="tel:+13128746699">312-874-6699</a>
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ function ContactSection() {
           <dl className="contact-meta">
             <div><dt>Address</dt><dd>2317 W. 18th St.<br />Chicago, IL 60608</dd></div>
             <div><dt>Hours</dt><dd>By appointment</dd></div>
-            <div><dt>Phone</dt><dd><a href="tel:+16306647283">630-664-7283</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+13128746699">312-874-6699</a></dd></div>
             <div className="cm-wide"><dt>Email</dt><dd><a href="mailto:xocohousegalleryinfo@gmail.com">xocohousegalleryinfo@gmail.com</a></dd></div>
           </dl>
 
